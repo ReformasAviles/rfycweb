@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Construcciones y reformas en Avilés: reformas integrales, obra nueva, instalaciones técnicas y mantenimiento. Servicio profesional y transparente.">
+  <meta name="theme-color" content="#00f2fe">
+  <link rel="stylesheet" href="css/s.css">
+  <link rel="icon" type="image/x-icon" href="img/logo.jpeg">
+  <title>Construcciones y Reformas Avilés</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f9fafb] text-[#1a1a1a]">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-50">
+    <nav role="navigation" class="mx-auto max-w-7xl px-6 py-4 mt-4 rounded-2xl backdrop-blur-md bg-white/60 border border-white/30 shadow-sm">
+      <div class="flex justify-between items-center">
+        
+        <!-- Logo -->
+        <a href="#inicio">
+          <img src="img/logo.png" alt="Logo Construcciones y Reformas Avilés" class="h-20 md:h-24 w-auto">
+        </a>
+
+        <div id="desktop-menu" class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="#inicio" class="hover:text-[#00f2fe] transition">Inicio</a>
+          <a href="#servicios" class="hover:text-[#00f2fe] transition">Servicios</a>
+          <a href="#contacto" class="hover:text-[#00f2fe] transition">Contacto</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden text-[#1a1a1a] p-2 rounded-lg hover:bg-gray-200" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+      </div>
+
+      <div id="mobile-menu" class="md:hidden hidden flex-col mt-3 bg-white/80 rounded-xl p-3 border border-white/30 shadow-sm" aria-hidden="true">
+        <a href="#inicio" class="block py-2 px-3 rounded hover:bg-cyan-50">Inicio</a>
+        <a href="#servicios" class="block py-2 px-3 rounded hover:bg-cyan-50">Servicios</a>
+        <a href="#contacto" class="block py-2 px-3 rounded hover:bg-cyan-50">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero pt-36 pb-24 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+
+      <div>
+        <span class="text-sm font-medium text-[#00f2fe] uppercase tracking-widest">
+          COMPROMISO Y EXCELENCIA
+        </span>
+
+        <h2 class="mt-4 text-4xl md:text-6xl font-bold leading-tight">
+          Transformamos tus espacios en el hogar que imaginas
+        </h2>
+
+        <p class="mt-6 text-gray-600 text-lg max-w-lg">
+          Nos encargamos de toda la gestión de tu reforma o construcción. Un servicio profesional, transparente y sin sorpresas para que tú solo te preocupes de disfrutar el resultado.
+        </p>
+
+        <div class="mt-8 flex gap-4 flex-wrap">
+          <!-- Botón funcional: baja a contacto -->
+          <a href="#contacto" class="btn-primary">
+            Solicitar proyecto
+          </a>
+
+          <!-- Botón funcional: baja a servicios -->
+          <a href="#servicios" class="btn-secondary">
+            Ver servicios
+          </a>
+        </div>
+      </div>
+
+      <div id="carousel" class="rounded-3xl bg-gradient-to-br from-cyan-100 via-blue-50 to-white p-2 shadow-xl" style="touch-action: pan-y;">
+        <div class="relative overflow-hidden rounded-2xl w-full" style="aspect-ratio: 16/10; min-height: 250px; max-height: 600px;">
+            <img id="carousel-image" src="img/portada.jpg" alt="Arquitectura moderna" class="object-cover w-full h-full transition duration-500" loading="lazy" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 900px" srcset="">
+
+            <button id="carousel-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 text-black rounded-full p-2 hover:bg-white transition" aria-label="Anterior imagen">‹</button>
+            <button id="carousel-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 text-black rounded-full p-2 hover:bg-white transition" aria-label="Siguiente imagen">›</button>
+          </div>
+
+          <div id="carousel-indicators" class="mt-3 flex justify-center gap-2"></div>
+          <p id="carousel-caption" class="mt-3 text-center text-sm text-gray-600" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <span class="text-sm font-medium text-[#00f2fe] uppercase tracking-widest">
+          Servicios
+        </span>
+
+        <h3 class="mt-4 text-3xl md:text-5xl font-bold">
+          Ingeniería para el mañana
+        </h3>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card -->
+        <div class="p-8 rounded-3xl border border-gray-200 bg-white hover:-translate-y-2 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-[#00f2fe] text-2xl">
+            🏠
+          </div>
+          <h4 class="mt-6 text-xl font-semibold">Reformas Integrales</h4>
+          <p class="mt-3 text-gray-600">
+            Transformación completa de viviendas y locales con gestión de proyecto llave en mano.
+          </p>
+        </div>
+
+        <!-- Card -->
+        <div class="p-8 rounded-3xl border border-gray-200 bg-white hover:-translate-y-2 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-[#00f2fe] text-2xl">
+            🧱
+          </div>
+          <h4 class="mt-6 text-xl font-semibold">Construcción y Estructuras</h4>
+          <p class="mt-3 text-gray-600">
+            Edificación de obra nueva, refuerzos estructurales y rehabilitación de fachadas o cubiertas.
+          </p>
+        </div>
+
+        <!-- Card -->
+        <div class="p-8 rounded-3xl border border-gray-200 bg-white hover:-translate-y-2 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-[#00f2fe] text-2xl">
+            ⚡
+          </div>
+          <h4 class="mt-6 text-xl font-semibold">Instalaciones Técnicas</h4>
+          <p class="mt-3 text-gray-600">
+            Renovación certificada de redes eléctricas, fontanería, climatización y sistemas de ahorro energético.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Nuevos servicios extra -->
+      <div class="mt-12 grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl border border-gray-200 bg-white hover:-translate-y-2 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-[#00f2fe] text-2xl">
+            🏗️
+          </div>
+          <h4 class="mt-6 text-xl font-semibold">Sistemas de Pladur y Tabiquería</h4>
+          <p class="mt-3 text-gray-600">Instalación de sistemas de drywall, falsos techos, divisiones interiores, aislamiento acústico y térmico.</p>
+        </div>
+
+        <div class="p-8 rounded-3xl border border-gray-200 bg-white hover:-translate-y-2 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-[#00f2fe] text-2xl">
+            ✨
+          </div>
+          <h4 class="mt-6 text-xl font-semibold">Acabados y Revestimientos en Yeso</h4>
+          <p class="mt-3 text-gray-600">Enlucidos, revestimientos de fachada, trasdosados de yeso, decoración de interiores y acabados personalizados.</p>
+        </div>
+
+        <div class="p-8 rounded-3xl border border-gray-200 bg-white hover:-translate-y-2 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-[#00f2fe] text-2xl">
+            🛡️
+          </div>
+          <h4 class="mt-6 text-xl font-semibold">Impermeabilización y Aislamiento</h4>
+          <p class="mt-3 text-gray-600">Sistemas de aislamiento térmico, acústico y protección de humedades con materiales de calidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact-section py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <h3 class="text-3xl md:text-5xl font-bold">
+          EXPERIENCIA Y COMPROMISO
+        </h3>
+        <p class="mt-4 text-gray-600 text-lg">
+          Diseño, gestión y ejecución integral para que no tengas que preocuparte de nada.
+        </p>
+      </div>
+
+      <!-- Formulario funcional -->
+      <!-- Formulario funcional -->
+<form action="https://formsubmit.co/luka.garcia.pfi@gmail.com" method="POST" class="contact-form max-w-2xl mx-auto flex flex-col gap-4">
+  <label for="nombre" class="sr-only">Nombre</label>
+  <input id="nombre" type="text" name="nombre" placeholder="Nombre" required class="p-3 border rounded-md">
+
+  <label for="email" class="sr-only">Email</label>
+  <input id="email" type="email" name="email" placeholder="Email" required class="p-3 border rounded-md">
+
+  <label for="mensaje" class="sr-only">Mensaje</label>
+  <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu proyecto" rows="5" class="p-3 border rounded-md"></textarea>
+
+  <button type="submit" class="btn-primary">
+    Enviar mensaje
+  </button>
+
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/34623284657?text=Hola,%20quiero%20contactarte%20sobre%20mi%20proyecto" 
+     target="_blank" rel="noopener noreferrer"
+     class="mt-4 inline-block bg-[#25D366] text-white font-semibold py-3 px-6 rounded-lg text-center hover:bg-green-600 transition">
+    Contáctanos por WhatsApp
+  </a>
+</form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <!-- Sobre nosotros -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Sobre nosotros</h4>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Expertos en construcción y reformas integrales. Más de 20 años de experiencia transformando espacios.
+          </p>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li><a href="#inicio" class="hover:text-[#00f2fe] transition">Inicio</a></li>
+            <li><a href="#servicios" class="hover:text-[#00f2fe] transition">Servicios</a></li>
+            <li><a href="#contacto" class="hover:text-[#00f2fe] transition">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+          <div class="flex gap-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00f2fe] flex items-center justify-center transition" title="Facebook">
+              <span class="text-white">f</span>
+            </a>
+            <a href="https://www.instagram.com/reformasaviles/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00f2fe] flex items-center justify-center transition" title="Instagram">
+              <span class="text-white">📷</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#00f2fe] flex items-center justify-center transition" title="LinkedIn">
+              <span class="text-white">in</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea divisora -->
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2026 Construcciones y Reformas Avilés. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-[#00f2fe] text-black p-3 rounded-full shadow-lg hover:bg-[#00d4ff] transition opacity-0 z-50" aria-label="Volver arriba" style="opacity: 0;">
+    ↑
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
